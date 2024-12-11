@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="formvalidation.js"></script>
+</head>
+<body>
+    <fieldset> 
+    <div class="container">   
+    <form name="myform" method="post" action="" onsubmit="return validateform()" >
+        <h1>Registration Form</h1> 
+        <div class="form-group">   
+    User Id:<br> <input type="text" placeholder="Enter User Id here" name="userid" class="form-control"></div><br><br>
+    <div class="form-group">   
+    Password:<br> <input type="password" placeholder="Enter Password here" name="password" class="form-control"></div><br><br>
+    <div class="form-group">   
+    Name:<br> <input type="text" name="name" placeholder="Enter Name here" class="form-control" id="name" onblur="validateString(this.id)"></div><br><br>
+    <div class="form-group">   
+    Address:<br> <input type="text" placeholder="Enter Address here" name="address" class="form-control"></div><br><br>
+    <div class="form-group"> 
+    Country: <select name="country" class="form-control">
+             <option value="select">Select</option>
+             <option value="india">India</option>
+             <option value="usa">USA</option>
+             <option value="germany">Germany</option>
+             <option value="france">France</option>
+             <option value="australia">Australia</option>
+    </select></div><br><br>
+    <div class="form-group">   
+    Zip Code:<br> <input type="text" name="zipcode" placeholder="Enter Zip Code here" class="form-control" id="zipcode" onblur="validatenumber(this.id)"></div><br><br>
+    <div class="form-group">   
+    Email:<br> <input type="text" placeholder="Enter Email Address here" class="form-control" name="email" id="email" onblur="validateEmail(this.id)"></div><br><br>
+    <div>
+    Gender: <br>
+     <input type="radio" name="gender" value="Male" class="l-radio"> Male<br>
+     <input type="radio" name="gender" value="Female" class="l-radio"> Female</div><br><br>
+       
+    Language:<br>
+    <input type="checkbox" name="lang" value="eng">English<br>
+    <input type="checkbox" name="lang" value="neng" >Non-English<br><br>
+    <div class="form-group">   
+    <textarea name="about" rows="10" cols="20" placeholder="ABOUT" class="form-control"></textarea></div><br><br>
+
+    <input type="submit" value="Submit" onclick="validateform()"><br><br>
+    <input type="reset" value="Reset" >
+</div>
+</div>
+</fieldset>
+</form>
+</body>
+</html>

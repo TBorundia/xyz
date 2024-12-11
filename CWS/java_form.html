@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script type="text/javascript" src="newjava1.js"></script>
+        <link rel="stylesheet" href="newjava.css">
+    </head>
+    <body>
+        <form name="myform" method="post" action="abc.jsp" 
+        onsubmit="return validateform()">
+             NAME:<input type="text" name="name"><br/><br/>
+             PASSWORD: <input type="password" name="password"><br/><br/>
+             CONFIRM PASSWORD:<input type="password" name="repassword"><br/><br/>
+             ADDRESS:<input type="text" name="ADDRESS"><br/><br/>
+             COUNTRY:
+             <SELECT>
+                <OPTION>SELECT</OPTION>
+                <OPTION>USA</OPTION>
+                <OPTION>INDIA</OPTION>
+                <OPTION>NEPAL</OPTION>
+                <OPTION>BUTAN</OPTION>
+                <OPTION>CHINA</OPTION>
+                <OPTION>JAPAN</OPTION>
+                <OPTION>RUSSIA</OPTION>
+             </SELECT><BR><BR>
+             ZIP CODE:<input type="NUMBER" name="ZIPCODE"><br/><br/>
+             EMAIL:<input type="EMAIL" name="EMAIL"><br/><br/>
+             GENDER:<BR>
+                <LABEL CLASS="CONTAINER">MALE
+                    <INPUT TYPE="RADIO" NAME="RADIO">
+                    <SPAN CLASS="CHECK"></SPAN>
+                </LABEL>
+                <LABEL CLASS="CONTAINER">FEMALE
+                    <INPUT TYPE="RADIO" NAME="RADIO">
+                    <SPAN CLASS="CHECK"></SPAN>
+                </LABEL><BR><BR>
+             LANGUAGE:<BR>
+             <LABLE CLASS="CONTAINER">
+                <INPUT TYPE="CHECKBOX">HINDI
+                <SPAN CLASS="CHECKMARK"></SPAN>
+             </LABLE><BR>
+             <LABLE CLASS="CONTAINER">
+                <INPUT TYPE="CHECKBOX">ENGLISH
+                <SPAN CLASS="CHECKMARK"></SPAN>
+             </LABLE><BR>
+             <LABLE CLASS="CONTAINER">
+                <INPUT TYPE="CHECKBOX">MARWADI
+                <SPAN CLASS="CHECKMARK"></SPAN>
+             </LABLE><BR>
+             <LABLE CLASS="CONTAINER">
+                <INPUT TYPE="CHECKBOX">MARATHI
+                <SPAN CLASS="CHECKMARK"></SPAN>
+             </LABLE><BR>
+             <LABLE CLASS="CONTAINER">
+                <INPUT TYPE="CHECKBOX">TAMIL
+                <SPAN CLASS="CHECKMARK"></SPAN>
+             </LABLE><BR><BR>
+             ABOUT:<BR>
+                <TEXTAREA rows="4" cols="30"></TEXTAREA><BR><BR>
+             <input type="submit" value="REGISTER"><br><br>
+
+        </form>
+    </body>
+</html>

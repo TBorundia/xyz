@@ -1,0 +1,12 @@
+body
+{
+    background-color: cornsilk;
+    color:blueviolet
+} 
+input
+{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing:content-box;
+}

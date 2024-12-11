@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>form validation</title>
+        <script src="final.js"></script>
+        <link rel="stylesheet" href="final.css">
+    </head>
+    <body>
+        <form onsubmit="return finalvalidate()">
+            username:
+            <input type="text" id="uname"><br><br>
+            password:
+            <input type="password" id="pass"><br><br>
+            repassword:
+            <input type="password" id="repass"><br><br>
+            full name:
+            <input type="text" id="name" onblur="return alphavalidate()"><br><br>
+            number:
+            <input type="text" id="num" onblur="return numvalidate()"><br><br>
+            address:
+            <input type="text" id="add" onblur="return addressvalidate()"><br><br>
+            email:
+            <input type="text" id="ema" onblur="return emailvalidate()"><br><br>
+            country:
+            <select>
+                <option>india</option>
+                <option>nepal</option>
+                <option>china</option>
+                <option>japan</option>
+                <option>usa</option>
+                <option>uk</option>
+            </select><br><br>
+            gender:
+            <input type="radio" value="male">male
+            <input type="radio" value="female">female<br><br>
+
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
