@@ -1,0 +1,434 @@
+/* Reset all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+/* Root variables */
+:root {
+  --primary-color: rgb(32, 144, 152);
+  --secondary-color: whitesmoke;
+  --text-color: #212121;
+  --button-gradient: linear-gradient(to right, #649bff, #0070fa, #649bff);
+  --button-gradient-hover: linear-gradient(to right, #5078e8, #0056b3, #5078e8);
+  --footer-text-color: #f8f9fa; /* Lighter text color for contrast */
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 9%;
+}
+
+/* Logo container */
+.header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 0; /* No margin to remove space between logo and brand name */
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+  margin-left: -9%; /* Push the logo to the extreme left */
+}
+
+/* Logo image */
+.header .logo img {
+  max-height: 100%;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+/* Brand name */
+.header .brand-name {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-left: 0.5rem; /* Reduced margin to minimize space */
+  letter-spacing: 1px;
+  font-family: "Roboto Slab", serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header .brand-name:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Navigation links */
+.headbar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.headbar a {
+  margin-left: 3rem;
+  color: var(--secondary-color);
+  font-size: 1.6rem;
+}
+
+.headbar a:hover {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/* Menu button */
+.header .menu {
+  margin-left: 4rem;
+}
+
+.header .menu button {
+  padding: 1rem 4.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-image: var(--button-gradient);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-image 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for menu button */
+.header .menu button:hover {
+  background-image: var(--button-gradient-hover);
+  transform: scale(1.05);
+}
+
+/* Main content */
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12rem 9%;
+  background-color: rgb(237, 249, 250);
+}
+
+.main-content .left {
+  max-width: 50%;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.main-content .left h2 {
+  font-size: 15px;
+  text-transform: capitalize;
+  color: rgb(106, 101, 101);
+  margin-top: 50px;
+}
+
+.main-content .left h1 {
+  font-size: 42px;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.main-content .left p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: rgb(106, 101, 101);
+}
+
+.main-content .left button {
+  padding: 15px 45px;
+  font-size: 14px;
+  color: #fff;
+  background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.main-content .right {
+  max-width: 40%;
+  text-align: right;
+}
+
+.main-content .right img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style for Helpline Button */
+.header .menu .helpline-button {
+  padding: 1rem 2rem; /* Adjust padding for button */
+  font-size: 1.4rem; /* Font size for the button */
+  color: #fff;
+  background-image: var(--button-gradient);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for Helpline Button */
+.header .menu .helpline-button:hover {
+  background-image: var(--button-gradient-hover);
+  transform: scale(1.05);
+}
+
+/* Style for Make an Appointment Button */
+.main-content .appointment-button {
+  padding: 1rem 2.5rem; /* Adjust padding for button */
+  font-size: 1.4rem; /* Font size for the button */
+  color: #fff;
+  background-image: var(--button-gradient);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for Make an Appointment Button */
+.main-content .appointment-button:hover {
+  background-image: var(--button-gradient-hover);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: var(
+    --primary-color
+  ); /* Same background color as the header */
+  padding: 1rem 5%; /* Reduced padding to make the footer smaller */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Footer sections */
+.footer .footer-content,
+.footer .quick-links,
+.footer .keep-in-touch {
+  flex: 1 1 15rem; /* Reduced flex-basis to fit in smaller footer */
+  margin-bottom: 0.5rem; /* Reduced margin to save space */
+}
+
+/* Footer logo */
+.footer .footer-logo {
+  font-size: 1.8rem; /* Reduced font size */
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem; /* Reduced margin */
+  font-family: "Roboto Slab", serif;
+}
+
+/* Footer description */
+.footer .footer-description {
+  color: var(--footer-text-color); /* Lighter text color */
+  font-size: 1.2rem; /* Further reduced font size */
+  line-height: 1.4; /* Reduced line height */
+  max-width: 300px; /* Reduced width to fit smaller footer */
+  margin-top: 1rem;
+  text-align: left; /* Align text to the left */
+}
+
+/* Quick links and keep in touch headers */
+.footer .quick-links h4,
+.footer .keep-in-touch h4 {
+  font-size: 1.6rem; /* Reduced font size */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  color: var(--footer-text-color); /* Lighter text color */
+}
+
+/* Quick links */
+.footer .quick-links ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer .quick-links li {
+  margin-bottom: 0.3rem; /* Reduced margin between links */
+  display: flex;
+  align-items: center; /* Align icons and text */
+}
+
+.footer .quick-links i {
+  font-size: 1.6rem; /* Icon size */
+  color: #fff; /* White color */
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.footer .quick-links a {
+  color: var(--footer-text-color); /* Lighter text color */
+  font-size: 1.2rem; /* Reduced font size */
+}
+
+/* Keep in touch section */
+.footer .keep-in-touch {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields container */
+.footer .keep-in-touch .input-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and input */
+  margin-bottom: 0.5rem; /* Space between input fields */
+}
+
+/* Icons in input fields */
+.footer .keep-in-touch .input-field i {
+  font-size: 1.6rem; /* Adjust icon size */
+  color: #fff; /* White color */
+}
+
+/* Input fields */
+.footer .keep-in-touch .input-field input,
+.footer .keep-in-touch .input-field textarea {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Keep in touch section */
+.footer .keep-in-touch {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields container */
+.footer .keep-in-touch .input-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and input */
+  margin-bottom: 0.5rem; /* Space between input fields */
+}
+
+/* Icons in input fields */
+.footer .keep-in-touch .input-field i {
+  font-size: 1.6rem; /* Adjust icon size */
+  color: #fff; /* White color */
+}
+
+/* Input fields */
+.footer .keep-in-touch .input-field input,
+.footer .keep-in-touch .input-field textarea {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  width: 100%;
+  border: 2px solid #021745;
+  border-radius: 0.25rem;
+  background-color: #e3ebf9;
+}
+
+/* Adjust the margin of the last input field (textarea) to create space for the send button */
+.footer .keep-in-touch .input-field textarea {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Style the send button */
+.footer .keep-in-touch .send-button {
+  padding: 0.5rem 1rem; /* Adjusted padding for a smaller button */
+  font-size: 1rem; /* Reduced font size */
+  color: #030202;
+  margin-top: 15px;
+  margin-left: 100px;
+  background: linear-gradient(to top left, rgb(11, 129, 219), white);
+  border-radius: 0.25rem; /* Smaller border-radius */
+  cursor: pointer;
+  width: 100%; /* Full width of container */
+  max-width: 200px; /* Set maximum width for button */
+  margin-top: 0.5rem; /* Space above the button */
+  align-self: flex-start; /* Align button to the start of the container */
+  transition: background-image 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for send button */
+.footer .keep-in-touch .send-button:hover {
+  background-image: var(--button-gradient-hover);
+  transform: scale(1.05);
+  color: white;
+}
+
+/* Adjust social media icons container */
+.footer .keep-in-touch .social-media-icons {
+  display: flex;
+  align-items: center; /* Center icons vertically */
+  gap: 1.5rem; /* Space between icons */
+  margin-top: 1.5rem; /* Space above social media icons */
+  margin-left: 130px;
+}
+
+/* Social media icons */
+.footer .keep-in-touch .social-media-icons a {
+  font-size: 1.8rem; /* Icon size */
+  color: #fff; /* White color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+.footer .keep-in-touch .social-media-icons a:hover {
+  color: #ccc; /* Light gray color on hover */
+  transform: scale(1.1);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  background-color: #aad0f9;
+  text-align: center;
+  padding: 0.5rem 0; /* Reduced padding */
+}
+
+.footer-bottom p {
+  font-size: 1.2rem; /* Reduced font size */
+  color: #030202; /* Lighter text color */
+}
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to "We Are Here For Your Care" */
+.main-content .left h2 {
+  font-size: 2rem; /* Adjust size if needed */
+  color: #4f4747; /* Ensure text is readable */
+  animation: fadeInUp 1.5s ease-out 0.3s forwards; /* Animation with a slight delay */
+  opacity: 0; /* Set initial opacity to 0 for animation effect */
+}
+
+/* Apply Animation to "Your wellbeing is our first priority" */
+.main-content .left h1 {
+  font-size: 2.5rem; /* Adjust size if needed */
+  color: black; /* Ensure text is readable */
+  animation: fadeInUp 2s ease-out 0.8s forwards; /* Animation with a longer delay */
+  opacity: 0; /* Set initial opacity to 0 for animation effect */
+}
+.main-content .left p {
+  font-size: 1.2rem;
+  animation: fadeInUp 2.5s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
