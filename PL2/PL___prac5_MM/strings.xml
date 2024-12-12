@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">practical5</string>
+    <string name="placement_registration_form">PLACEMENT REGISTRATION
+FORM</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="cgpa">CGPA:</string>
+    <string name="branch">Branch:</string>
+    <string name="date_of_birth">Date of Birth:</string>
+    <string name="age">Age:</string>
+    <string name="tech_stack">Tech Stack Know:</string>
+    <string name="applying_for">Applying For:</string>
+    <string name="submit">Submit</string>
+    <string name="checkbox_text">All Info provided by me is correct</string>
+    <string-array name="branch_array">
+        <item>CSE</item>
+        <item>IT</item>
+        <item>AIML</item>
+        <item>Cyber</item>
+        <item>Data Science</item>
+    </string-array>
+    <!-- Add any other strings you may need for your app here -->
+</resources>
