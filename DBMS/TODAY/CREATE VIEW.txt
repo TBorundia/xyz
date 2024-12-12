@@ -1,0 +1,5 @@
+create view sailor1 as (select * from sailor where sid in (22,29,31,32,58,95));
+create view sailor2 as (select * from sailor where sid in (31,32,64,71,74));
+create view sailor3 as (select * from sailor where sid in (22,32,85,74));
+create view reserve1 as (select * from reserve where sid in (22,64));
+create view reserve2 as (select * from reserve where sid in (31,74));

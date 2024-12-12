@@ -1,0 +1,62 @@
+CREATE TABLE sailor(
+sid int,
+sname VARCHAR(30) NOT NULL,
+rating int,
+age float,
+CONSTRAINT sailor_pk PRIMARY KEY(sid)
+);
+
+CREATE TABLE boat(
+bid INT NOT NULL,
+bname VARCHAR(30),
+color VARCHAR(10),
+CONSTRAINT boat_pk PRIMARY KEY(bid)
+);
+
+CREATE TABLE RESERVE (
+SID NUMBER(2) NOT NULL, BID NUMBER(3) NOT NULL,
+RDAY DATE DEFAULT SYSDATE NOT NULL,
+CONSTRAINT RESERVE_PK_SID_BID PRIMARY KEY (SID, BID),
+CONSTRAINT RESERVE_FK_SAILOR_SID FOREIGN KEY (SID) REFERENCES SAILOR(SID),
+CONSTRAINT RESERVE_FK_BOAT_BID FOREIGN KEY (BID) REFERENCES BOAT(BID)
+);
+
+
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (22, 'DUSTIN', 7, 45.0);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (29, 'BRUTUS', 1, 33.0);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (31, 'LUBBER', 8, 55.5);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (32, 'ANDY', 8, 25.5);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (58, 'RUSTY', 10, 35.0);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (64, 'HORATIO', 7, 35.0);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (71, 'ZORBA', 10, 16.0);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (74, 'HORATIO', 9, 35.0);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (85, 'ART', 3, 25.5);
+INSERT INTO sailor(sid, sname, rating, age)
+VALUES (95, 'BOB', 3, 63.5);
+
+-- The following SQL statements populate the boat table
+INSERT INTO boat (bid,bname, color) VALUES (101, 'INTERLAKE', 'BLUE');
+INSERT INTO boat (bid, bname, color) VALUES ( 102,'INTERLAKE', 'RED');
+INSERT INTO boat ( bid,bname, color) VALUES ( 103,'CLIPPER', 'GREEN');
+INSERT INTO boat (bid, bname, color) VALUES (104, 'MARINE', 'RED');
+
+-- The following SQL statements populate the reservetable
+INSERT INTO reserve(sid, bid, rday) VALUES (22, 101, '10-Oct-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (22, 102, '10-Oct-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (22, 103, '08-Oct-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (22, 104, '07-Oct-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (31, 102, '10-Nov-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (31, 103, '06-Nov-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (31, 104, '12-Nov-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (64, 101, '05-Sep-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (64, 102, '08-Sep-1998');
+INSERT INTO reserve(sid, bid, rday) VALUES (74, 103, '08-Sep-1998');
