@@ -1,0 +1,278 @@
+#include<stdio.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main(void)
+{
+    printf("Hello \n");
+    fork();    	// Generate multiple copies
+    printf("bye\n");
+    printf("%d\n",getpid());
+    return 0;
+}
+
+
+Fork2.c ______________________________
+Code :
+#include<stdio.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdlib.h>
+int main(void)
+{
+    // Make two process which run same
+    // program after this instruction
+    // p==0 ----> child
+    // p>0  ----> parent
+    // p<0  ----> Paging / error
+    pid_t p = fork();
+    if(p<0){
+   	 perror("fork fail");
+   	 exit(1);
+    }
+    printf("Hello World!,child process_id(pid)=%d\n",getpid());
+    printf("Hello World!,parent process_id(pid)=%d\n",getppid());
+    return 0;
+}
+
+Fork3.c _____________________________
+Code :
+#include<stdio.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main(void)
+{
+    fork();
+    fork();
+    fork();
+    printf("Hello \n");
+    return 0;
+}
+
+Fork4.c _____________________________
+Code :
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<unistd.h>
+void forkexample()
+{
+    pid_t p;
+    p=fork();
+    if(p<0){
+   	 perror("fork fails");
+   	 exit(1);
+    }
+    //child process because return value zero
+    else if(p==0){
+   	 printf("Hello from Child!\n");
+    }
+    // parent process because return value non-zero
+    else{
+   	 printf("Hello from Parent!\n");
+    }
+}
+int main(){
+    forkexample();
+    return 0;
+}
+
+Fork5.c _____________________________
+Code :
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<unistd.h>
+void forkexample()
+{
+    int x=1;
+    pid_t p=fork();
+    if(p<0){
+   	 perror("fork fails");
+   	 exit(1);
+    }
+    else if(p==0){
+   	 printf("Child has x = %d\n",++x);
+    }
+    else{
+   	 printf("Parent has x = %d\n",--x);
+    }
+}
+int main(){
+    forkexample();
+    return 0;
+}
+
+
+Fork5.c _____________________________
+Code :
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<unistd.h>
+void forkexample()
+{
+    int x=1;
+    pid_t p=fork();
+    if(p<0){
+   	 perror("fork fails");
+   	 exit(1);
+    }
+    else if(p==0){
+   	 printf("Child has x = %d\n",++x);
+    }
+    else{
+   	 printf("Parent has x = %d\n",--x);
+    }
+}
+int main(){
+    forkexample();
+    return 0;
+}
+
+Fork6.c _____________________________
+Code :
+#include<stdio.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main()
+{
+    pid_t ret_value;
+    printf("The process ID is %d\n",getpid());
+    ret_value=fork();
+    if(ret_value<0){
+    // Fork system call failed
+   	 printf("fork fails");
+    }
+    else if(ret_value==0){
+   	 // child process
+   	 printf("Child Process\n");
+   	 printf("Process ID is %d\n",getpid());
+   	 sleep(5);
+    }
+    else{
+   	 // Parent process
+   	 wait(NULL);
+   	 printf("Parent Process\n");
+   	 printf("Process ID is %d\n",getppid());
+   	 sleep(5);
+    }
+}
+
+Fork 7.c _____________________________
+Code :
+#include<stdio.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main()
+{
+     int n,a,b;
+    pid_t ret_value;
+    printf("The process ID is %d\n",getpid());
+    ret_value=fork();
+    if(ret_value<0){
+    // Fork system call failed
+   	 printf("fork fails");
+    }
+    else if(ret_value==0){
+   	 // child process
+   	 printf("********************Child Process********************\n");
+   	 printf("Process ID is %d and parent id is %d\n",getpid(),getppid());
+   	 printf("Enter the number to check EVEN or ODD\n");
+   	 scanf("%d",&n);
+   	 if(n%2==0){
+   		 printf("Number %d is EVEN\n",n);
+   	 }
+   	 else{
+   		 printf("Number %d is ODD\n",n);
+   	 }
+   	 sleep(5);
+    }
+    else{
+   	 // Parent process
+   	 wait(NULL);
+   	 printf("********************Parent Process********************\n");
+   	 printf("Process ID is %d\n",getpid());
+   	 printf("Enter two Number to check greatest\n");
+   	 scanf("%d%d",&a,&b);
+   	 if(a>b){
+   		 printf("%d is greatest than %d\n",a,b);
+   	 }
+   	 else{
+   		 printf("%d is greatest than %d\n",b,a);
+   	 }
+   	 sleep(5);
+    }
+    return 0;
+}
+
+Fork8.c _____________________________
+Code:
+#include<stdio.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main()
+{
+     int n,key,idx,a;
+     int c=0,d=0;
+    pid_t ret_value;
+    printf("The process ID is %d\n",getpid());
+    ret_value=fork();
+    if(ret_value<0){
+    // Fork system call failed
+   	 printf("fork fails");
+    }
+    else if(ret_value==0){
+   	 // child process
+   	 printf("********************Child Process********************\n");
+   	 printf("Process ID is %d and parent id is %d\n",getpid(),getppid());
+   	 printf("Enter the number of element in array\n");
+   	 scanf("%d",&n);
+   	 int A[n];
+   	 printf("Enter element in array\n");
+   	 for(int i=0;i<n;i++){
+   		 scanf("%d",&A[i]);
+   	 }
+   	 printf("Enter the key\n");
+   	 scanf("%d",&key);
+   	 for(int i=0;i<n;i++){
+   		 if(A[i]==key){
+   			 idx=i;
+   			 c++;
+   			 break;
+   		 }
+   	 }
+   	 if(c==0){
+   		 printf("Element not found");
+   	 }
+   	 else{
+   	 printf("Element found at index %d",idx);
+   	 }
+   	 sleep(10);
+    }
+    else{
+   	 // Parent process
+   	 wait(NULL);
+   	 printf("********************Parent Process********************\n");
+   	 printf("Process ID is %d\n",getpid());
+   	 printf("Enter a Number to check prime\n");
+   	 scanf("%d",&a);
+   	 for(int i=2;i<a;i++){
+   		 if(i%2==0){
+   		 	d++;
+   			 break;
+   		 }
+   		 
+   	 }
+   	 if(d>0){
+   		 printf("Prime");
+   	 }
+   	 else{
+   	 printf(" Not Prime");
+   	 }
+   	 sleep(5);
+    }
+    return 0;
+}
