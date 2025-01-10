@@ -1,0 +1,50 @@
+public class Main
+{
+	public static void main(String[] args) {
+		shoppingCart sc1=new shoppingCart(new regdiscount());
+		double amount1=sc1.calculateTotal(1000);
+		System.out.println(amount1);
+		
+		shoppingCart sc2=new shoppingCart(new premDiscount());
+		double amount2=sc2.calculateTotal(1000);
+		System.out.println(amount2);
+		
+		shoppingCart sc3=new shoppingCart(new holidayDiscount());
+		double amount3=sc3.calculateTotal(1000);
+		System.out.println(amount3);
+	}
+}
+
+interface discountStrategy{
+    double applyDiscount(double amt);
+}
+
+public class shoppingCart{
+    discountStrategy strategy;
+    
+    shoppingCart(discountStrategy strategy){
+        this.strategy = strategy;
+    }
+    
+    double calculateTotal(double amt){
+        return amt-strategy.applyDiscount(amt);
+    }
+}
+
+public class premDiscount implements discountStrategy{
+    public double applyDiscount(double amt){
+        return amt*0.2;
+    }
+}
+
+public class regdiscount implements discountStrategy{
+    public double applyDiscount(double amt){
+        return amt*0.1;
+    }
+}
+
+public class holidayDiscount implements discountStrategy{
+    public double applyDiscount(double amt){
+        return amt*0.3;
+    }
+}

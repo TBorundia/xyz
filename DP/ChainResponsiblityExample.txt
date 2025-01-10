@@ -1,0 +1,79 @@
+public class Main {
+    public static void main(String[] args) {
+        ReportingManager rm1 = new ReportingManager(10);
+        ReportingManager2 rm2 = new ReportingManager2(10);
+        Director dir = new Director(10);
+
+        rm1.setSuccessor(rm2);
+        rm2.setSuccessor(dir);
+
+        rm1.handleRequest(200);
+    }
+}
+
+abstract class LeaveRequest {
+    int day;
+    LeaveRequest nextHandler;
+
+    LeaveRequest(int day) {
+        this.day = day;
+    }
+
+    void setSuccessor(LeaveRequest nextHandler) {
+        this.nextHandler = nextHandler;
+    }
+
+    abstract void handleRequest(int day);
+}
+
+
+class ReportingManager extends LeaveRequest {
+    ReportingManager(int day) {
+        super(day);
+    }
+
+    @Override
+    void handleRequest(int day) {
+        if (day < 5) {
+            System.out.println("Handled by Reporting Manager 1");
+        } else {
+            if (nextHandler != null) {
+                nextHandler.handleRequest(day);
+            }
+        }
+    }
+}
+
+class ReportingManager2 extends LeaveRequest {
+    ReportingManager2(int day) {
+        super(day);
+    }
+
+    @Override
+    void handleRequest(int day) {
+        if (day >= 5 && day<=15) {
+            System.out.println("Handled by Reporting Manager 2");
+        } else {
+            if (nextHandler != null) {
+                nextHandler.handleRequest(day);
+            }
+        }
+    }
+}
+
+class Director extends LeaveRequest {
+    Director(int day) {
+        super(day);
+    }
+
+    @Override
+    void handleRequest(int day) {
+        if (day > 15) {
+            System.out.println("Handled by Director");
+        } else {
+            if (nextHandler != null) {
+                nextHandler.handleRequest(day);
+            }
+        }
+    }
+}
