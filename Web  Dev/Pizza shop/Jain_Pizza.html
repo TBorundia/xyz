@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>JAIN PIZZA'S</title>
+        <style>
+          body{font-family:"courier"}
+          bgImg{background-image: url("background-image:C:\Users\hp\Desktop\Pizza shop\Pizza.jpg");}
+        </style>
+    </head>
+    <body>
+      <div class="bgImg">JAIN PIZZA'S</div>
+      <img src="C:\Users\hp\Desktop\Pizza shop\P_name.jpg" width="1300" height="800">
+<!-- Menu Container -->
+      <div style="background-color:lightcyan">
+        <div style="margin-left: 30px;">
+  
+          <center><h1><b>MENU</b></h1></center>
+          <div>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+          <div class="col s4 tablink padding-large hover-red"><h1><center>Pizza</center></h1></div></a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Chinese');">
+        <div class="col s4 tablink padding-large hover-red"><h1><center>Chinese</center></h1></div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Beverages');">
+        <div class="col s4 tablink padding-large hover-red"><h1><center>Beverages</center></h1></div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="container menu padding-32 white" style="background-color:rgb(251, 235, 245);">
+      <h1><b>Margherita</b><b style="float: right;">Rs. 200</b></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Cheese Corn Pizza</b><b style="float: right;">Rs. 250</b></h1>
+      <p>Corn, Capsium, fresh mozzarella</p>
+      <hr>
+      
+      <h1><b>Farm House Pizza</b><b style="float: right;">Rs. 300</b></h1>
+      <p>Fresh tomatoes, onions, Capsicum, olives, fresh mozzarella</p>
+      <hr>
+
+      <h1><b>Onion Capsicum Pizza</b><b style="float: right;">Rs. 180</b></h1>
+      <p>Onions, Capsicum, olives, fresh mozzarella, fresh basil</p>
+      <hr>
+    </div>
+
+    <div id="Chinese" class="container menu padding-32 white" style="background-color:cornsilk;">
+      <h1><b>Noodles</b><b style="float: right;">Rs. 100</b></h1>
+      <p>Special sauce, Cabbage, carrot, Capsicum</p>
+      <hr>
+   
+      <h1><b>Manchurian</b><b style="float: right;">Rs. 130</b></h1>
+      <p>Dry / Gravy</p>
+      <hr>
+      
+      <h1><b>Fried Rice</b><b style="float: right;">Rs. 110</b></h1>
+      <p>Rice, Special sauce, Cabbage, carrot, Capsicum</p>
+      <hr>
+
+      <h1><b>Manchow soup</b> <b style="float: right;">Rs. 80</b></h1>
+      <p>fresh vegetables</p>
+    </div>
+
+
+    <div id="Beverages" class="container menu padding-32 white" style="background-color:cornsilk;">
+      <h1><b>Coffee</b><b style="float: right;">Rs. 30</b></h1>
+      <hr>
+   
+      <h1><b>Masala Tea</b><b style="float: right;">Rs. 20</b></h1>
+      <hr>
+      <h1><b>Fresh Fruit Shake</b><b style="float: right;">Rs. 90</b></h1>
+      <p>Fruit of your choice</p>
+      <hr>
+     <h1><b>Chocolate Shake</b><b style="float: right;">Rs. 80</b></h1>
+     <p>Chocolate of your choice</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!--About-->
+<div style="background-color:brown;color: white;font-size: xx-large;">
+    <h1><b><center>About</center></b></h1>
+    <p style="margin-left: 30px;">It is the brainchild of the two Gujarati brothers--Ajay Jain and his elder brother Jaideep Solanki. 
+      After they shifted from Pune to Navsari in Gujarat along with their parents in 2012, they opened their 
+      first store, which was became brand.<br> We are proud of our interiors.</p>
+    <p style="margin-left: 30px;"><strong>The Chef:</strong> Mr. Rahul Sharma </p>
+    <img src="C:\Users\hp\Desktop\Pizza shop\Hotel.webp" width="1000" height="600" style="margin-left: 30px;">
+
+    <h1 style="margin-left: 60px;"><b>Opening Hours</b></h1>
+     <div style="margin-left: 30px;">
+        <p>Sunday & Monday CLOSED</p>
+        <p>Tuesday to Friday 10:00 a.m. - 10:00 p.m.</p>
+        <p>Saturday 3:00 p.m. - 10:00 p.m.</p>
+     </div> 
+</div>
+<img src="C:\Users\hp\Desktop\Pizza shop\Map.jpg" width="1500" height="500">
+<!-- Contact -->
+<div style="background-color:darkslateblue;color: white;font-size: xx-large;">
+    <h1><b><center>Contact</center></b></h1>
+    <p style="margin-left: 30px;">Find us at some address at some place or call us at 9098765432</p>
+    <p style="margin-left: 30px;">We offer full-service catering for any event, large or small. We understand your needs and we will 
+      cater the food to satisfy the biggerst criteria of them all, both look and taste.</p><br>
+      <strong style="margin-left: 30px;">Address:</strong><p style="margin-left: 30px;">Near Eternity Mall, SitaBuldi, Nashik.</p>
+    <p style="margin-left: 30px;"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <center>
+      <form>
+      <p>NAME:<br><input type="text" placeholder="Name" required name="Name"></p>
+      <p>How many people:<br><input type="number" placeholder="How many people" required name="People"></p>
+      <p>DATE & TIME:<br><input type="date" placeholder="Date" required name="date" value="2020-11-16"/></p>
+      <p>SPECIAL NOTE:<br><input type="text" placeholder="Message" required name="Message"></p>
+      <p><button type="submit">SEND MESSAGE</button></p>
+    </form>
+  </center>
+  </div>
+
+<footer>
+  <h1 style="background-color:coral;color: beige;"><center><b>Powered by <a href="file:///C:/pari/src/Component/pizza.html#myMap">JAIN Pizza's</b></center></a></h1>
+</footer>
+
+<script>
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace("");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " ";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
