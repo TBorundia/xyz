@@ -1,0 +1,48 @@
+Deployment models for cloud computing
+
+When selecting a cloud strategy, a company must consider factors such as required cloud application components, preferred resource management tools, and any legacy IT infrastructure requirements.
+
+The three cloud computing deployment models are cloud-based, on-premises, and hybrid.
+
+To learn more about deployment models, choose each of the following three tabs.
+
+Cloud-based deployment
+
+On-premises deployment
+
+Hybrid deployment
+Run all parts of the application in the cloud.
+Migrate existing applications to the cloud.
+Design and build new applications in the cloud.
+In a cloud-based deployment model, you can migrate existing applications to the cloud, or you can design and build new applications in the cloud. You can build those applications on low-level infrastructure that requires your IT staff to manage them. Alternatively, you can build them using higher-level services that reduce the management, architecting, and scaling requirements of the core infrastructure.
+
+For example, a company might create an application consisting of virtual servers, databases, and networking components that are fully based in the cloud.
+
+Benefits of cloud computing
+
+Consider why a company might choose to take a particular cloud computing approach when addressing business needs.
+
+To learn more about the benefits, expand each for the following six categories.
+
+Trade upfront expense for variable expense
+
+Stop spending money to run and maintain data centers
+
+Stop guessing capacity
+
+Benefit from massive economies of scale
+
+Increase speed and agility
+
+Go global in minutes
+Additional resources
+
+To learn more about the concepts that were explored in Module 1, review these resources.
+
+AWS glossary(opens in a new tab)
+Whitepaper: Overview of Amazon Web Services(opens in a new tab)
+AWS Fundamentals: Overview(opens in a new tab)
+(opens in a new tab)
+What is cloud computing?(opens in a new tab)
+Types of cloud computing(opens in a new tab)
+Cloud computing with AWS(opens in a new tab)
